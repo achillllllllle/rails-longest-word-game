@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ul {
+  list-style-type: none;
+}
+
+.play-button {
+  width: 80px !important;
+}
