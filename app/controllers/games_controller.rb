@@ -3,6 +3,7 @@ require "open-uri"
 
 class GamesController < ApplicationController
   def new
+    @start_time = Time.now
     @array = []
     alphabet = ('A'..'Z').to_a
     for i in 0..10 do
@@ -32,5 +33,6 @@ class GamesController < ApplicationController
         @message = "Congratulations ! #{@reponse.join.upcase} is a valid English word!"
       end
     end
+    flash[:score] = "SCORE"
   end
 end
